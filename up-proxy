@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# Get the full directory name of this script
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+
+# Save the current directory
+pushd $DIR
+
+# Ensure the nginx-proxy network
+./up-network
+
+# Docker compose up
+docker-compose up

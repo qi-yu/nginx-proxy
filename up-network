@@ -1,0 +1,7 @@
+#!/bin/bash
+
+# create the network `nginx-proxy` if not exists
+docker network inspect nginx-proxy &> /dev/null
+if [ $? -ne 0 ]; then
+   docker network create nginx-proxy
+fi
