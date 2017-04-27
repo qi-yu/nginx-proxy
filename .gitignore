@@ -1,5 +1,7 @@
 # Docker volumes
-.volumes/nginx-conf/*
+.volumes/*
 
 # Exclude specified volume
+!.volumns/nginx-conf
+.volumes/nginx-conf/*
 !.volumes/nginx-conf/client_max_body_size.conf
